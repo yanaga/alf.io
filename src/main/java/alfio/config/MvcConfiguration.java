@@ -94,7 +94,7 @@ public class MvcConfiguration extends WebMvcConfigurerAdapter {
 
     @Override
     public void addResourceHandlers(ResourceHandlerRegistry registry) {
-        ResourceHandlerRegistration reg = registry.addResourceHandler("/resources/**").addResourceLocations("/resources/");
+        ResourceHandlerRegistration reg = registry.addResourceHandler("/resources/**").addResourceLocations("/resources/").addResourceLocations("classpath:META-INF/resources/");
         int cacheMinutes = environment.acceptsProfiles(Initializer.PROFILE_LIVE) ? 15 : 0;
         reg.setCachePeriod(cacheMinutes * 60);
     }

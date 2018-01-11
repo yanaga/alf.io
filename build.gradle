@@ -175,6 +175,12 @@ dependencies {
     compile 'de.danielbechler:java-object-diff:0.95-RC5'
     compile 'com.github.scribejava:scribejava-core:5.0.0'
 
+    compile 'org.jsondoc:spring-boot-starter-jsondoc:1.2.19', {
+        exclude group: 'org.slf4j', module: 'slf4j-api'
+        exclude group: 'ch.qos.logback', module: 'logback-classic'
+    }
+    compile 'org.jsondoc:jsondoc-ui-webjar:1.2.19'
+
     testCompile "org.springframework:spring-test:$springVersion"
     testCompile "com.insightfullogic:lambda-behave:0.3"
 

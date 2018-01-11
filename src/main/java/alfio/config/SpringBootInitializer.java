@@ -19,6 +19,7 @@ package alfio.config;
 import com.openhtmltopdf.util.XRLog;
 import lombok.extern.log4j.Log4j2;
 import org.eclipse.jetty.server.session.DefaultSessionIdManager;
+import org.jsondoc.spring.boot.starter.EnableJSONDoc;
 import org.springframework.boot.autoconfigure.EnableAutoConfiguration;
 import org.springframework.boot.context.embedded.EmbeddedServletContainerCustomizer;
 import org.springframework.boot.context.embedded.MimeMappings;
@@ -51,6 +52,7 @@ import static org.springframework.web.context.support.WebApplicationContextUtils
         org.springframework.boot.autoconfigure.session.SessionAutoConfiguration.class})
 @Configuration
 @Profile(Initializer.PROFILE_SPRING_BOOT)
+@EnableJSONDoc
 @Log4j2
 public class SpringBootInitializer {
 
